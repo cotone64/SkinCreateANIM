@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>チェックボックスの合計</title>
+</head>
+<body>
+    <label><input type="radio" name="character" class="calc-checkbox" value="40000"> スティーブ</label>
+    <label><input type="radio" name="character" class="calc-checkbox" value="80000"> アレックス</label>
+    <br>
+    <label><input type="checkbox" class="calc-checkbox" value="1"> 腕固定</label>
+    <label><input type="checkbox" class="calc-checkbox" value="4"> 足固定</label>
+    <label><input type="checkbox" class="calc-checkbox" value="2"> 腕ゾンビ</label>
+    <br>
+    <label><input type="checkbox" class="calc-checkbox" value="40"> 両腕同じ動き</label>
+    <label><input type="checkbox" class="calc-checkbox" value="20"> 両足同じ動き</label>
+    <br>
+    <label><input type="checkbox" class="calc-checkbox" value="80"> グライド</label>
+    <label><input type="checkbox" class="calc-checkbox" value="100"> 防具見えない</label>
+    <label><input type="checkbox" class="calc-checkbox" value="60000"> 腰曲がる</label>
+    <label><input type="checkbox" class="calc-checkbox" value="80000000"> 逆さま</label>
+    <br>
+    合計: <input type="text" id="total" readonly>
+
+    <script>
+        document.querySelectorAll('.calc-checkbox').forEach(cb => {
+            cb.addEventListener('change', () => {
+                let sum = 0;
+                document.querySelectorAll('.calc-checkbox:checked').forEach(checked => {
+                    sum += parseInt(checked.value, 10);
+                });
+                document.getElementById('total').value = sum;
+            });
+        });
+    </script>
+</body>
+</html>
