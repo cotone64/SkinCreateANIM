@@ -6,21 +6,60 @@
     <title>チェックボックスの合計</title>
 </head>
 <body>
-    <label><input type="radio" name="character" class="calc-checkbox" value="40000"> スティーブ</label>
-    <label><input type="radio" name="character" class="calc-checkbox" value="80000"> アレックス</label>
+    <!-- スティーブとアレックスのチェックボックス -->
+    <label>
+        <input type="radio" name="character" class="calc-checkbox" value="40000"> 
+        スティーブ (Steve)
+    </label>
+    <label>
+        <input type="radio" name="character" class="calc-checkbox" value="80000"> 
+        アレックス (Alex)
+    </label>
     <br>
-    <label><input type="checkbox" class="calc-checkbox" value="1"> 腕固定</label>
-    <label><input type="checkbox" class="calc-checkbox" value="4"> 足固定</label>
-    <label><input type="checkbox" class="calc-checkbox" value="2"> 腕ゾンビ</label>
+    
+    <!-- 腕や足に関するチェックボックス -->
+    <label>
+        <input type="checkbox" class="calc-checkbox" value="1"> 
+        腕固定 (Arm Fixed)
+    </label>
+    <label>
+        <input type="checkbox" class="calc-checkbox" value="4"> 
+        足固定 (Leg Fixed)
+    </label>
+    <label>
+        <input type="checkbox" class="calc-checkbox" value="2"> 
+        腕ゾンビ (Zombie Arm)
+    </label>
     <br>
-    <label><input type="checkbox" class="calc-checkbox" value="40"> 両腕同じ動き</label>
-    <label><input type="checkbox" class="calc-checkbox" value="20"> 両足同じ動き</label>
+    
+    <label>
+        <input type="checkbox" class="calc-checkbox" value="40"> 
+        両腕同じ動き (Both Arms Same Movement)
+    </label>
+    <label>
+        <input type="checkbox" class="calc-checkbox" value="20"> 
+        両足同じ動き (Both Legs Same Movement)
+    </label>
     <br>
-    <label><input type="checkbox" class="calc-checkbox" value="80"> グライド</label>
-    <label><input type="checkbox" class="calc-checkbox" value="100"> 防具見えない</label>
-    <label><input type="checkbox" class="calc-checkbox" value="60000"> 腰曲がる</label>
-    <label><input type="checkbox" class="calc-checkbox" value="80000000"> 逆さま</label>
+    
+    <label>
+        <input type="checkbox" class="calc-checkbox" value="80"> 
+        グライド (Glide)
+    </label>
+    <label>
+        <input type="checkbox" class="calc-checkbox" value="100"> 
+        防具見えない (Invisible Armor)
+    </label>
+    <label>
+        <input type="checkbox" class="calc-checkbox" value="60000"> 
+        腰曲がる (Bent Waist)
+    </label>
+    <label>
+        <input type="checkbox" class="calc-checkbox" value="80000000"> 
+        逆さま (Upside Down)
+    </label>
     <br>
+    
     合計: <input type="text" id="total" readonly>
 
     <script>
